@@ -1,0 +1,21 @@
+  <h1>Bienvenido a Sinatra!</h1>
+  <p>Este es un esqueleto de sinatra que armamos para ti</p>
+
+  
+<h1>Welcome to Selfie!</h1>
+
+<form method="post" enctype='multipart/form-data' action="upload">
+  <input type='file' name='photo[photo]'>
+  <br/>
+  <input type='submit' value='Upload!'>
+</form>
+
+
+<ul>
+  <% @photos.each do |photo| %>
+    <div>
+      <img src="<%= photo.image %>">
+    </div>
+  <% end %>
+</ul>
+
